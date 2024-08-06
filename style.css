@@ -1,0 +1,191 @@
+:root {
+    --main-font: 'Barlow Semi Condensed', sans-serif;
+
+    --body-color: #F2F2F2;
+    --color-one: #733FC8;
+    --color-two: #48556A;
+    --color-three: #19202D;
+    --color-four: #FFFFFF;
+    --color-five: #ECF2F8;
+    --color-six: #A775F1;
+    --color-seven: #CFCFCF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--body-color);
+    font-family: var(--main-font);
+}
+
+.grid_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4.5rem 1.5rem;
+}
+
+.card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+    border-radius: 8px;
+}
+
+.card_header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.card1 {
+    background: var(--color-one);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 0%;
+    background-size: 7rem;
+}
+
+.card2 {
+    background: var(--color-two);
+}
+
+.card3 {
+    background: var(--color-four);
+}
+
+.card4 {
+    background: var(--color-three);
+}
+
+.card5 {
+    background: var(--color-four);
+}
+
+
+.card_image {
+    border-radius: 100%;
+    width: 35px;
+}
+
+.card1 img, .card4 img {
+    border: 3px solid var(--color-six);
+}
+
+.author_name{
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.author_verified {
+    font-size: 0.7em;
+    font-weight: 500;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1.125rem;
+}
+
+.description_title {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.description_text {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+/* ---------------CARD 1 ----------------------*/
+.card1 {
+    color: var(--color-four);
+}
+.card1 p {
+    color: var(--color-seven);
+}
+
+/* ---------------CARD 2 ----------------------*/
+.card2 {
+    color: var(--color-four);
+}
+.card2 p {
+    color: var(--color-seven);
+}
+
+/* ---------------CARD 3 ----------------------*/
+.card3 {
+    color: var(--color-two);
+}
+
+/* ---------------CARD 4 ----------------------*/
+.card4 {
+    color: var(--color-four);
+}
+.card4 h2 {
+    color: var(--color-five);
+}
+.card4 p {
+    color: var(--color-seven);
+}
+
+/* ---------------CARD 5 ----------------------*/
+.card5 {
+    color: var(--color-two);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    padding: 2rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none; 
+}
+
+@media (min-width: 800px) {
+    .grid_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 10rem;
+    }
+
+    .card1 {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .card2 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .card3 {
+        grid-column: 1;
+        grid-row: 2; 
+    }
+
+    .card4 {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+    }
+
+    .card5 {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+}
